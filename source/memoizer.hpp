@@ -6,7 +6,6 @@
 #include "function_signature.hpp"
 
 
-#if 1
 template <auto func>
 class Memoizer
 {
@@ -28,5 +27,4 @@ public:
     hash_table m_map{};
 };
 
-#endif
 #endif // MEMOIZER_HPP
