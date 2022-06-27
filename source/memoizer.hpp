@@ -13,8 +13,14 @@ class Memoizer
     using value_t = function_return_t<func_t>;
     using key_t = function_args_as_tuple_t<func_t>;
     using hash_table = std::unordered_map<key_t, value_t>;
-
 public:
+	Memoizer()=default;
+	~Memoizer()=default;
+	Memoizer(Memoizer&&)=default;
+ 	Memoizer& operator=(Memoizer&&)const =default;
+	Memoizer(const Memoizer&)=default;
+	Memoizer& operator=(const Memoizer&)const =default;
+	
     // requires size_t std::struct hash<T>::operator()(const T &x) const
     // requires bool operator==(const T&) const
     template <typename... T>

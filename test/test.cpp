@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#indef BE_VERBOSE
+#ifndef BE_VERBOSE
 #define VERBOSE(expr) expr
 #else
 #define VERBOSE(expr)
