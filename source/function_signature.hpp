@@ -4,6 +4,18 @@
 template <typename Sig>
 struct function_signature;
 
+ 
+#if 0
+template <typename R, typename... Args>
+struct function_signature<[](Args &&...args) -> R>
+{
+    // using return_t = decltype(lmda(Args...));
+    using return_t = R;
+    using args_t = std::tuple<Args...>;
+};
+
+#endif
+
 template <typename R, typename... Args>
 struct function_signature<R (*)(Args...)>
 {

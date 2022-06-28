@@ -1,7 +1,6 @@
 #ifndef MEMOIZER_HPP
 #define MEMOIZER_HPP
 
-
 #ifdef USE_CONCEPTS
 #include <concepts>
 #include <type_traits>
@@ -18,7 +17,7 @@ concept Hashable = requires(T a)
 #include "hash_tuple.hpp"
 #include "function_signature.hpp"
 
-template <auto func> // invocable
+template <auto func> // TODO: use  invocable
 class Memoizer
 {
 
@@ -43,11 +42,11 @@ public:
     requires(Hashable<T> &&...) && (std::equality_comparable<T> && ...)
 #endif
                                        value_t
-                                       operator()(T... t)
+                                       operator()(T &&...t)
     {
 
-        key_t tupl{key_t{t...}};
-        return m_map.contains(tupl) ? m_map[tupl] : m_map[tupl] = std::invoke(func, t...);
+        key_t tupl{key_t{std::forward<T>(t)...}};
+        return m_map.contains(tupl) ? m_map[tupl] : m_map[tupl] = std::invoke(func, std::forward<T>(t)...);
     };
 
     hash_table m_map{};
