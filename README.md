@@ -1,12 +1,12 @@
-# memoizer
+# memorizer
 ## What it is 
-A header-only implementetion of a class, that incapsulates memoization technic by making a proxy call to the function, it was created for.
-Result of each call to particular memoizer object is stored in an individual for this object hash-table only if table doesn't already 
+A header-only implementation of a class, that encapsulates memorization technic by making a proxy call to the function, it was created for.
+The result of each call to a particular memorizer object is stored in an individual for this object hash-table only, if the table doesn't already 
 contain the key, that arguments produce (class hases args as a std::tuple).
-## Requierments
+## Requirements
 -  C++17 and later.
 
--  Each parameter to the function (func) is hashable,that is can be used as a key.
+-   Each parameter to the function (func) is hashable, that is can be used as a key.
 
 ```c++
 T func(Args...args){...}
@@ -14,7 +14,7 @@ T func(Args...args){...}
 std::unorderd_map<T, Args>  //    size_t std:: struct hash<T>::operator()(const T &x) const
 ```
 
-- Each parameter to the function is equality comparable.
+-   Each parameter to the function is equality comparable.
 
 ```c++
 (Args{...} == Args{...}) //    bool Args::operator==(const Args&) const
@@ -22,7 +22,7 @@ std::unorderd_map<T, Args>  //    size_t std:: struct hash<T>::operator()(const 
 Optional: Googletest for testing. 
 
 ## How to get
-You can just use clone(no submodules requiered) :
+You can just use clone( no submodules required) :
 
 ```bash
 git clone https://github.com/artomartom/memoizer/tree/main  
@@ -46,13 +46,14 @@ int compute_some_real_quick(int a,string s )
 {
     ...
 };
+...
 //... and create memoizer
 Memoizer<compute_some_real_quick> mem{};
 //now you can call it!
 mem(1,"hello");
 mem(-123,"world");
 ```
-(see /example/ for more details )
+(see /example/ for more details)
 
 > **_NOTE:_**   In computer programming, a pure function is a function that has the following properties:
 >-   the function return values are identical for identical arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams), and
@@ -64,5 +65,4 @@ mem(-123,"world");
     \(-__-)/
 
 ## PS
-Your issues, pulls, recomendations and/or any other form of feedback is welcome.:smiley:
-
+Your issues, pulls, recommendations and/or any other form of feedback is welcome.:smiley:
