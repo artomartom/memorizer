@@ -42,13 +42,13 @@ git checkout "origin/main"
 
 Take a pure function
 > **_NOTE:_**   https://en.wikipedia.org/wiki/Pure_function
-> **_NOTE:_** In computer programming, a pure function is a function that has the following properties:
-> **_NOTE:_** -   the function return values are identical for identical arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams), and
-> **_NOTE:_** 
-> **_NOTE:_** -   the function application has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
-> **_NOTE:_** 
+>   In computer programming, a pure function is a function that has the following properties:
+>   -   the function return values are identical for identical arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams), and
+>   
+>   -   the function application has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
+>   
 # License
-\(-__-)/
+    \(-__-)/
 
 ## PS
 Your issues, pulls, recomendations and/or any other form of feedback is welcome.:smiley:
