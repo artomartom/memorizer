@@ -61,8 +61,6 @@ mem(-123,"world");
 >-   the function application has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
 >(see also: https://en.wikipedia.org/wiki/Pure_function)
 
-# License
-    \(-__-)/
 
 ## PS
 Your issues, pulls, recommendations and/or any other form of feedback is welcome.:smiley:
