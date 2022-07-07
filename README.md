@@ -1,10 +1,10 @@
 # memorizer
 ## What it is 
-A header-only implementation of a class, that encapsulates a mechanism for applying memorization technic by making a proxy call to the function, it was created for.
+A header-only implementation of a class, that encapsulates a mechanism for applying memorization technic via a proxy call to the function, it was parameterized with.
 The result of each call to a particular memorizer object is stored in an individual for this object hash-table only, if the table doesn't already 
 contain the key, that arguments produce (class hases args as a std::tuple).
 ## Requirements
--  C++17 and later.
+-   C++17 and later.
 
 -   Each parameter to the function (func) is hashable, that is can be used as a key.
 
