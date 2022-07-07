@@ -32,9 +32,9 @@ Or checkout only ./source/all_in_one/ header file, without all the examples and 
 ```bash
 # works for  bash and powershell 
 git clone "https://github.com/artomartom/memorizer" --no-checkout  --depth 1
-cd memorizer
+cd memorizer 
 git sparse-checkout init
-echo /source/all_in_one/ >> ".\.git\info\sparse-checkout" 
+git sparse-checkout add source/all_in_one/
 git checkout "origin/main"
 ```
 
