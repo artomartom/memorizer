@@ -25,14 +25,14 @@ Optional: Googletest for testing.
 You can just use clone( no submodules required) :
 
 ```bash
-git clone https://github.com/artomartom/memoizer/tree/main  
+git clone https://github.com/artomartom/memorizer/tree/main  
 ```
 Or checkout only ./source/all_in_one/ header file, without all the examples and tests
 
 ```bash
 # works for  bash and powershell 
-git clone "https://github.com/artomartom/memoizer" --no-checkout  --depth 1
-cd memoizer
+git clone "https://github.com/artomartom/memorizer" --no-checkout  --depth 1
+cd memorizer
 git sparse-checkout init
 echo /source/all_in_one/ >> ".\.git\info\sparse-checkout" 
 git checkout "origin/main"
@@ -47,8 +47,8 @@ int compute_some_real_quick(int a,string s )
     ...
 };
 ...
-//... and create memoizer
-Memoizer<compute_some_real_quick> mem{};
+//... and create memorizer
+Memorizer<compute_some_real_quick> mem{};
 //now you can call it!
 mem(1,"hello");
 mem(-123,"world");

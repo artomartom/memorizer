@@ -1,10 +1,12 @@
 
-#include <memoizer.hpp>
+#include <memorizer.hpp>
 #include <iostream>
+
+//this example demonstrates usage for recursive calls to memorizer
 
 unsigned long long fib(unsigned long long n)
 {
-    static Memoizer<fib> mem_fib{};
+    static Memorizer<fib> mem_fib{};
     if (n < 2ULL)
     {
         return n;

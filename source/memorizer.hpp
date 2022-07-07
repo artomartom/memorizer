@@ -1,5 +1,6 @@
-#ifndef MEMOIZER_HPP
-#define MEMOIZER_HPP
+#ifndef MEMORIZER_HPP
+#define MEMORIZER_HPP
+
 
 #ifdef USE_CONCEPTS
 #include <concepts>
@@ -18,7 +19,7 @@ concept Hashable = requires(T a)
 #include "function_signature.hpp"
 
 template <auto func> // TODO: use  invocable
-class Memoizer
+class Memorizer
 {
 
     using func_t = decltype(func);
@@ -27,12 +28,12 @@ class Memoizer
     using hash_table = std::unordered_map<key_t, value_t>;
 
 public:
-    Memoizer() = default;
-    ~Memoizer() = default;
-    Memoizer(Memoizer &&) = default;
-    Memoizer &operator=(Memoizer &&) = default;
-    Memoizer(const Memoizer &) = default;
-    Memoizer &operator=(const Memoizer &) = default;
+    Memorizer() = default;
+    ~Memorizer() = default;
+    Memorizer(Memorizer &&) = default;
+    Memorizer &operator=(Memorizer &&) = default;
+    Memorizer(const Memorizer &) = default;
+    Memorizer &operator=(const Memorizer &) = default;
 
     // requires size_t std::struct hash<T>::operator()(const T &x) const
     // requires bool operator==(const T&) const
@@ -50,6 +51,6 @@ public:
     };
 
     hash_table m_map{};
-}; // class Memoizer
+}; // class Memorizer
 
-#endif // MEMOIZER_HPP
+#endif // MEMORIZER_HPP

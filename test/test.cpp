@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../source/memoizer.hpp"
+#include "../source/memorizer.hpp"
 #include "test.hpp"
 
 using namespace std;
@@ -10,7 +10,7 @@ using namespace std;
 #define VERBOSE(expr)
 #endif // BE_VERBOSE
 
-TEST(memoizer, test_test)
+TEST(memorizer, test_test)
 {
     EXPECT_FALSE(false);
     EXPECT_TRUE(true);
@@ -18,7 +18,7 @@ TEST(memoizer, test_test)
 
 unsigned long long fib(unsigned long long n)
 {
-    static Memoizer<fib> mem_fib{};
+    static Memorizer<fib> mem_fib{};
     if (n < 2ULL)
     {
         return n;
@@ -42,7 +42,7 @@ TEST(with_lambda, basic)
 {
     auto l{[](int i)->int
            { return 213; }};
-    Memoizer<decltype(decltype(l)::operator())> mem_fib{};
+    Memorizer<decltype(decltype(l)::operator())> mem_fib{};
     mem_fib(l, 123);
     mem_fib(l, 124);
 };

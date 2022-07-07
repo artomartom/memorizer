@@ -1,5 +1,7 @@
-#include <all_in_one/memoizer.hpp>
+#include <all_in_one/memorizer.hpp>
 #include <iostream>
+
+//this example demonstrates usage with user defined class MyClass
 
 struct MyClass
 {
@@ -30,7 +32,7 @@ namespace std
 int main()
 {
     MyClass s{};
-    Memoizer<static_cast<int (MyClass::*)(int) const>(&MyClass::MyMethod)> mem{}; // pass MyMethodtion (cast,if ambiguite)
+    Memorizer<static_cast<int (MyClass::*)(int) const>(&MyClass::MyMethod)> mem{}; // pass MyMethodtion (cast,if ambiguite)
     mem(s, 13);                                                                   // prints
     mem(s, 13);                                                                   // uses cache
     mem(s, 745);                                                                  // prints
