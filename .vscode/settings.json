@@ -6,7 +6,8 @@
         "fstream": "cpp",
         "iosfwd": "cpp",
         "memory": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "concepts": "cpp"
     },
 
     "C_Cpp.default.includePath": ["./source/"]

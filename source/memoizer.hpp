@@ -30,10 +30,9 @@ public:
     Memoizer() = default;
     ~Memoizer() = default;
     Memoizer(Memoizer &&) = default;
-    Memoizer &operator=(Memoizer &&) const = default;
+    Memoizer &operator=(Memoizer &&) = default;
     Memoizer(const Memoizer &) = default;
-    Memoizer &operator=(const Memoizer &) const = default;
-    auto operator<=>(const Memoizer &) const = default;
+    Memoizer &operator=(const Memoizer &) = default;
 
     // requires size_t std::struct hash<T>::operator()(const T &x) const
     // requires bool operator==(const T&) const
@@ -46,7 +45,8 @@ public:
     {
 
         key_t tupl{key_t{std::forward<T>(t)...}};
-        return m_map.contains(tupl) ? m_map[tupl] : m_map[tupl] = std::invoke(func, std::forward<T>(t)...);
+        auto value{m_map.find(tupl)};
+        return (value != m_map.end()) ?  (*value).second : m_map[tupl] = std::invoke(func, std::forward<T>(t)...);
     };
 
     hash_table m_map{};

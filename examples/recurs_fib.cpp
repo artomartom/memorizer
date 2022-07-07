@@ -29,6 +29,6 @@ int main(int args, char *argv[])
     }
     else
     {
-        std::cerr << "on input given";
+        std::cerr << "no input given";
     }
 };

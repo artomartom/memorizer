@@ -38,13 +38,13 @@ TEST(with_functions, recurse_fib)
 }
 #if 0
 
-TEST(with_lambda,basic)
+TEST(with_lambda, basic)
 {
-
-   Memoizer<[](int i){return 213;}> mem_fib{};
-   mem_fib(123);
-   mem_fib(124);
-     
+    auto l{[](int i)->int
+           { return 213; }};
+    Memoizer<decltype(decltype(l)::operator())> mem_fib{};
+    mem_fib(l, 123);
+    mem_fib(l, 124);
 };
 #endif
 TEST(with_method, hashable_comparable)
@@ -53,7 +53,6 @@ TEST(with_method, hashable_comparable)
     test_obj equal_to_2{124};
     test_obj equal_to_1{124};
     test_obj unique_hash{555};
-     
 };
 
 TEST(with_static_method, hashable_noncomparable){
@@ -62,3 +61,12 @@ TEST(with_static_method, hashable_noncomparable){
 TEST(with_static_method, nonhashable_comparable){
 
 };
+
+
+
+
+
+
+
+
+
