@@ -30,7 +30,7 @@ git clone https://github.com/artomartom/memorizer
 Or checkout only ./source/all_in_one/ header file, without all the examples and tests
 
 ```bash
-# works for  bash and powershell 
+
 git clone "https://github.com/artomartom/memorizer" --no-checkout  --depth 1
 cd memorizer 
 git sparse-checkout init
