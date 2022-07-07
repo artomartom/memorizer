@@ -1,4 +1,4 @@
-#include <memoizer.hpp>
+#include <all_in_one/memoizer.hpp>
 #include <iostream>
 
 struct MyClass

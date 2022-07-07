@@ -4,24 +4,24 @@ A header-only implementetion of a class, that incapsulates memoization technic b
 Result of each call to particular memoizer object is stored in an individual for this object hash-table only if table doesn't already 
 contain the key, that arguments produce (class hases args as a std::tuple).
 ## Requierments
-1.  C++17 and later.
+-  C++17 and later.
 
-2.  Each parameter to the function (func) is hashable,that is can be used as a key.
+-  Each parameter to the function (func) is hashable,that is can be used as a key.
 
 ```c++
 T func(Args...args){...}
 ...
-std::unorderd_map<T, Args>//    size_t std:: struct hash<T>::operator()(const T &x) const
+std::unorderd_map<T, Args>  //    size_t std:: struct hash<T>::operator()(const T &x) const
 ```
 
-3. Each parameter to the function is equality comparable.
+- Each parameter to the function is equality comparable.
 
 ```c++
-(Args{...}==Args{...})//    bool Args::operator==(const Args&) const
+(Args{...} == Args{...}) //    bool Args::operator==(const Args&) const
 ```
 Optional: Googletest for testing. 
 
-## How to use
+## How to get
 You can just use clone(no submodules requiered) :
 
 ```bash
@@ -38,6 +38,18 @@ echo /source/all_in_one/ >> ".\.git\info\sparse-checkout"
 git checkout "origin/main"
 ```
 
+## How to use
+
+Take a pure function
+> **_NOTE:_**   https://en.wikipedia.org/wiki/Pure_function
+> **_NOTE:_** In computer programming, a pure function is a function that has the following properties:
+> **_NOTE:_** -   the function return values are identical for identical arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams), and
+> **_NOTE:_** 
+> **_NOTE:_** -   the function application has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
+> **_NOTE:_** 
+# License
+\(-__-)/
+
 ## PS
-Your issues, pulls, recomendations and/or any other form of feetback is welcome.:smiley:
+Your issues, pulls, recomendations and/or any other form of feedback is welcome.:smiley:
 
