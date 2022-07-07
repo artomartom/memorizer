@@ -27,15 +27,17 @@ You can just use clone(no submodules requiered) :
 ```bash
 git clone https://github.com/artomartom/memoizer/tree/main  
 ```
-Or checkout only source folder, without all the examples and tests
+Or checkout only all_in_one header file, without all the examples and tests
+
 ```bash
-#bash and powershell 
+# works for  bash and powershell 
 git clone "https://github.com/artomartom/memoizer" --no-checkout  --depth 1
 cd memoizer
 git sparse-checkout init
-echo /source/ >> ".\.git\info\sparse-checkout" 
+echo /source/all_in_one/ >> ".\.git\info\sparse-checkout" 
 git checkout "origin/main"
 ```
 
+## PS
+Your issues, pulls, recomendations and/or any other form of feetback is welcome.:smiley:
 
-## Your Feetback
