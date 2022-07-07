@@ -17,7 +17,7 @@ std::unorderd_map<T, Args>  //    size_t std:: struct hash<T>::operator()(const 
 -   Each parameter to the function is equality comparable.
 
 ```c++
-(Args{...} == Args{...}) //    bool Args::operator==(const Args&) const
+(Args{ } == Args{ }) //    bool Args::operator==(const Args&) const
 ```
 Optional: Googletest for testing. 
 
@@ -27,7 +27,7 @@ You can just use clone( no submodules required) :
 ```bash
 git clone https://github.com/artomartom/memoizer/tree/main  
 ```
-Or checkout only all_in_one header file, without all the examples and tests
+Or checkout only ./source/all_in_one/ header file, without all the examples and tests
 
 ```bash
 # works for  bash and powershell 
