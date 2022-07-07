@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 enable_testing()
-find_package(GTest CONFIG  )
+find_package(GTest REQUIRED CONFIG )
 
 if(GTest_FOUND)
     add_executable(UNIT_TEST test.cpp)
