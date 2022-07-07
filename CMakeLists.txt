@@ -21,7 +21,7 @@ if(BUILD_EXAMPLES)
     foreach(EACH IN LISTS EXAMPLES)
         get_filename_component(TARGET ${EACH} NAME_WE  )
         add_executable(${TARGET} ${EACH})
-        target_include_directories(${TARGET}  PUBLIC source/)
+        target_include_directories(${TARGET}  PUBLIC source)
         message(STATUS "X=${TARGET}")
     endforeach()
  

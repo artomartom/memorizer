@@ -25,7 +25,7 @@ Optional: Googletest for testing.
 You can just use clone( no submodules required) :
 
 ```bash
-git clone https://github.com/artomartom/memorizer/tree/main  
+git clone https://github.com/artomartom/memorizer
 ```
 Or checkout only ./source/all_in_one/ header file, without all the examples and tests
 
