@@ -40,12 +40,26 @@ git checkout "origin/main"
 
 ## How to use
 
-Take a pure function
+```c++
+//take a  pure function, taking non-zero number of args with return type not beeing void 
+int compute_some_real_quick(int a,string s )    
+{
+    ...
+};
+//... and create memoizer
+Memoizer<compute_some_real_quick> mem{};
+//now you can call it!
+mem(1,"hello");
+mem(-123,"world");
+```
+(see /example/ for more details )
+
 > **_NOTE:_**   In computer programming, a pure function is a function that has the following properties:
 >-   the function return values are identical for identical arguments (no variation with local static variables, non-local variables, mutable reference arguments or input streams), and
 >   
 >-   the function application has no side effects (no mutation of local static variables, non-local variables, mutable reference arguments or input/output streams).
->(https://en.wikipedia.org/wiki/Pure_function)
+>(see also: https://en.wikipedia.org/wiki/Pure_function)
+
 # License
     \(-__-)/
 
