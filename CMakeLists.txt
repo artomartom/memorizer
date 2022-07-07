@@ -8,9 +8,13 @@ project(memorizer VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_subdirectory(test)
-
+option(TEST "build" ON)
 option(BUILD_EXAMPLES "build" ON)
+
+if(TEST)
+    add_subdirectory(test)
+endif(TEST)
+
 
 
 
