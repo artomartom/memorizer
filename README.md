@@ -19,8 +19,23 @@ std::unorderd_map<T, Args>//    size_t std:: struct hash<T>::operator()(const T 
 ```c++
 (Args{...}==Args{...})//    bool Args::operator==(const Args&) const
 ```
+Optional: Googletest for testing. 
 
 ## How to use
+You can just use clone(no submodules requiered) :
+
+```bash
+git clone https://github.com/artomartom/memoizer/tree/main  
+```
+Or checkout only source folder, without all the examples and tests
+```bash
+#bash and powershell 
+git clone "https://github.com/artomartom/memoizer" --no-checkout  --depth 1
+cd memoizer
+git sparse-checkout init
+echo /source/ >> ".\.git\info\sparse-checkout" 
+git checkout "origin/main"
+```
 
 
 ## Your Feetback
